@@ -20,7 +20,7 @@ struct custInfo
 
 void add()
 {
-    fptr = fopen ("C:/Users/Tox/Documents/C C++ Projects/Practice Projects/CTelecom/bin/Data/src.txt", "a");
+    fptr = fopen ("{User directory}", "a");
     struct custInfo user;
     printf("ID:\n");
     scanf ("%d", &user.ID);
@@ -41,7 +41,7 @@ void add()
 void search()
 {
 
-    fptr = fopen ("C:/Users/Tox/Documents/C C++ Projects/Practice Projects/CTelecom/bin/Data/src.txt", "r");
+    fptr = fopen ("{User directory}", "r");
     while (fgets(buff, sizeof(buff), fptr))
     {
         printf("%s\n", buff);
@@ -57,8 +57,8 @@ void deleteData()
     char str[MAX];
     char ch;
     int loca, ctr = 0;
-    fptr = fopen ("C:/Users/Tox/Documents/C C++ Projects/Practice Projects/CTelecom/bin/Data/src.txt", "r");
-    fptr2 = fopen ("C:/Users/Tox/Documents/C C++ Projects/Practice Projects/CTelecom/bin/Data/src2.txt", "w");
+    fptr = fopen ("{User directory}", "r");
+    fptr2 = fopen ("{User directory}", "w");
     printf("Line: ");
     scanf("%d", &loca);
     getchar();
@@ -77,8 +77,8 @@ void deleteData()
         }
     fclose(fptr);
     fclose(fptr2);
-    remove("C:/Users/Tox/Documents/C C++ Projects/Practice Projects/CTelecom/bin/Data/src.txt");
-    rename("C:/Users/Tox/Documents/C C++ Projects/Practice Projects/CTelecom/bin/Data/src2.txt", "C:/Users/Tox/Documents/C C++ Projects/Practice Projects/CTelecom/bin/Data/src.txt");
+    remove("{User directory}");
+    rename("{User directory}", "{User directory}");
 }
 
 int main()
